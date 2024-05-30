@@ -10,8 +10,8 @@ csv_file_path = 'Data/data.csv'
 data = pd.read_csv(csv_file_path)
 
 # Define image size and other parameters
-IMG_HEIGHT = 1972  # You can adjust this based on your needs
-IMG_WIDTH = 1368
+IMG_HEIGHT = 128  # You can adjust this based on your needs
+IMG_WIDTH = 128
 BATCH_SIZE = 32
 
 # Function to load and preprocess images
@@ -27,7 +27,6 @@ labels = []
 
 for index, row in data.iterrows():
     img_path = row['image']
-    # Assuming the label information is directly in the format provided earlier
     label_info = eval(row['label'])
     
     for label_entry in label_info:
